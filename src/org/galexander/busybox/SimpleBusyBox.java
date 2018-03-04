@@ -1,4 +1,4 @@
-package org.galexander.busybox;
+package net.yinlight.busybox;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.io.InputStream;
 
 
-public class SimpleBusyBox extends Activity
+public class BusyBoxIDE extends Activity
 {
 	private TextView status_text = null;
 	private TextView pastable_text = null;
@@ -76,7 +76,7 @@ public class SimpleBusyBox extends Activity
 		b.setIcon(android.R.drawable.ic_dialog_info);
 		b.setTitle("About");
 		b.setMessage(
-			"SimpleBusyBox version " + get_version_str() +
+			"BusyBoxIDE version " + get_version_str() +
 			"\nBusyBox version 1.24.2");
 		b.show();
 	}

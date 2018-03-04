@@ -5,4 +5,4 @@
 ndk-build -j8 &&
 mv obj/local/armeabi/busybox res/raw/busybox &&
 ant release &&
-mrinst bin/SimpleBusyBox-release.apk
+mrinst bin/BusyBoxIDE-release.apk

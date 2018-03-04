@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="org.galexander.busybox"
+      package="net.yinlight.busybox"
       android:versionCode="3"
       android:versionName="3">
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
-    <application android:label="SimpleBusyBox" android:icon="@drawable/icon">
-        <activity android:name="SimpleBusyBox" android:label="SimpleBusyBox">
+    <application android:label="BusyBoxIDE" android:icon="@drawable/icon">
+        <activity android:name="BusyBoxIDE" android:label="BusyBoxIDE">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

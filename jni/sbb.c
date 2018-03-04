@@ -13,7 +13,7 @@ static jobject curr_sbb;
 static jclass cl_system;
 static jclass cl_printstream;
 static jclass cl_string;
-static jclass cl_simplebusybox;
+static jclass cl_busyboxide;
 static jclass cl_inputstream;
 
 static jmethodID mid_println;
@@ -46,14 +46,14 @@ jni_init(JNIEnv *env_, jobject this)
 	CLASS(printstream, "java/io/PrintStream")
 	CLASS(string, "java/lang/String")
 	CLASS(inputstream, "java/io/InputStream")
-	CLASS(simplebusybox, "org/galexander/busybox/SimpleBusyBox")
+	CLASS(busyboxide, "net/yinlight/busybox/BusyBoxIDE")
 
 	METHOD(println, printstream, "println", "(Ljava/lang/String;)V")
 	METHOD(is_read, inputstream, "read", "([B)I")
-	METHOD(sbb_update_status, simplebusybox, "update_status",
+	METHOD(sbb_update_status, busyboxide, "update_status",
 			"(Ljava/lang/String;)V")
-	METHOD(sbb_display_path, simplebusybox, "display_path", "()V");
-	METHOD(sbb_get_version, simplebusybox, "get_version", "()I")
+	METHOD(sbb_display_path, busyboxide, "display_path", "()V");
+	METHOD(sbb_get_version, busyboxide, "get_version", "()I")
 
 	STFIELD(out, system, "out", "Ljava/io/PrintStream;")
 
@@ -265,7 +265,7 @@ share_directory(char *fn)
 }
 
 JNIEXPORT void JNICALL
-Java_org_galexander_busybox_SimpleBusyBox_determine_1status(JNIEnv *env_,
+Java_net_yinlight_busybox_BusyBoxIDE_determine_1status(JNIEnv *env_,
 		jobject this, jstring path)
 {
 	char *p;
@@ -289,7 +289,7 @@ Java_org_galexander_busybox_SimpleBusyBox_determine_1status(JNIEnv *env_,
 
 /* is = InputStream */
 JNIEXPORT void JNICALL
-Java_org_galexander_busybox_SimpleBusyBox_native_1install(JNIEnv *env_,
+Java_net_yinlight_busybox_BusyBoxIDE_native_1install(JNIEnv *env_,
 	jobject this, jstring path, jobject is)
 {
 	char *p;
